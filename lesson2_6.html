@@ -1,0 +1,14 @@
+<script>
+
+    var summ = +prompt("Введите сумму ");
+    var counter50 = Math.floor(summ / 50);
+	var remainder50 = summ % 50;
+	console.log("Купюр по 50 грн в количестве " + counter50);
+	var counter5 = Math.floor(remainder50 / 5);
+    console.log("Купюр по 5 грн в количестве " + counter5);
+	var remainder5 = remainder50 % 5;
+	console.log("Купюр по 1 грн в количестве " + remainder5);
+	var summ1 = counter50 * 50 + counter5 * 5 + remainder5;
+	console.log("Ваша сумма итого составляет " + summ1 );
+	
+</script>
