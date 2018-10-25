@@ -1,0 +1,91 @@
+<script>
+
+    var summ = +prompt("Введите сумму ");
+    var counter500 = Math.floor(summ / 500);
+	    if (counter500 > 10){
+		var i = counter500 - 10
+	var remainder500 = summ % 500 + i * 500;
+	    counter500 = 10;
+	}else{
+	var remainder500 = summ % 500;
+	}
+	console.log("Купюр по 500 грн в количестве " + counter500);
+	
+	var counter200 = Math.floor(remainder500 / 200);
+	if (counter200 > 10){
+		var i = counter200 - 10
+	var remainder200 = remainder500 % 200 + i * 200;
+	    counter200 = 10;
+	}else{
+   	var remainder200 = remainder500 % 200;
+	}
+	console.log("Купюр по 200 грн в количестве " + counter200);
+	
+	var counter100 = Math.floor(remainder200 / 100);
+	if (counter100 > 10){
+		var i = counter100 - 10
+	var remainder100 = remainder200 % 100 + i * 100;
+	    counter100 = 10;
+		}else{
+	var remainder100 = remainder200 % 100;
+	}
+	console.log("Купюр по 100 грн в количестве " + counter100);
+	
+	var counter50 = Math.floor(remainder100 / 50);
+	if (counter50 > 10){
+		var i = counter50 - 10
+	var remainder50 = remainder100 % 50 + i * 50;
+	    counter50 = 10;
+		}else{
+	var remainder50 = remainder100 % 50;
+	}
+	console.log("Купюр по 50 грн в количестве " + counter50);
+	
+	var counter20 = Math.floor(remainder50 / 20);
+	if (counter20 > 10){
+		var i = counter20 - 10
+	var remainder20 = remainder50 % 20 + i * 20;
+	    counter20 = 10;
+		}else{
+	var remainder20 = remainder50 % 20;
+	}
+	console.log("Купюр по 20 грн в количестве " + counter20);
+	
+	var counter10 = Math.floor(remainder20 / 10);
+	if (counter10 > 10){
+		var i = counter10 - 10
+	var remainder10 = remainder20 % 10 + i * 10;
+	    counter10 = 10;
+		}else{
+	var remainder10 = remainder20 % 10;
+	}
+	console.log("Купюр по 10 грн в количестве " + counter10);
+	
+	var counter5 = Math.floor(remainder10 / 5);
+	if (counter5 > 10){
+		var i = counter5 - 10
+	var remainder5 = remainder10 % 5 + i * 5;
+	    counter5 = 10;
+		}else{
+	var remainder5 = remainder10 % 5;
+	}
+	console.log("Купюр по 5 грн в количестве " + counter5);
+	
+	var counter2 = Math.floor(remainder5 / 2);
+	if (counter2 > 10){
+		var i = counter2 - 10
+	var remainder2 = remainder5 % 2 + i * 2;
+	    counter2 = 10;
+		}else{
+	var remainder2 = remainder5 % 2;
+	}
+	console.log("Купюр по 2 грн в количестве " + counter2);
+	
+	if (remainder2 <= 10){			
+	console.log("Купюр по 1 грн в количестве " + remainder2);
+	var summ1 = counter500 * 500 + counter200 * 200 + counter100 * 100 + counter50 * 50 + counter20 * 20 + counter10 * 10 + counter5 * 5 + counter2 * 2 + remainder2;
+	console.log("Ваша сумма итого составляет " + summ1 );
+	}else{
+	console.log("Извините, Ваша сумма превышает имеющиеся наличные средства в банкомате");
+	}
+</script>
