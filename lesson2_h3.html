@@ -1,0 +1,46 @@
+<script>
+
+    var sum = +prompt("Введите сумму дохода за предыдущий год в $ ");
+    var sum1 = +prompt("Введите сумму индивидуального вычета в $ ");
+	var taxable_income = sum - sum1;
+	
+	
+	if (taxable_income <= 9525){
+    var taxable_income10 = taxable_income;	
+    var tax = taxable_income10 * 0.1;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}else if(taxable_income <= 38700){
+	var taxable_income12 = taxable_income - 9525 ;
+	var tax = 9525*0.1 + taxable_income12  * 0.12;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}else if(taxable_income <= 82500){
+	var taxable_income22 = taxable_income - 38700;	
+    var tax = 9525*0.1 + (38700 - 9525) * 0.12 + taxable_income22 * 0.22;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}else if(taxable_income <= 157500){
+	var taxable_income24 = taxable_income - 82500;	
+    var tax = 9525*0.1 + (38700 - 9525) * 0.12 + (82500-38700) * 0.22 + taxable_income24 * 0.24;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}else if(taxable_income <= 200000){
+	var taxable_income32 = taxable_income - 157500;	
+    var tax = 9525*0.1 + (38700 - 9525) * 0.12 + (82500-38700) * 0.22 + (157500-82500) * 0.24 + taxable_income32 * 0.32;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}else if(taxable_income <= 500000){
+	var taxable_income35 = taxable_income - 200000;	
+    var tax = 9525*0.1 + (38700 - 9525) * 0.12 + (82500-38700) * 0.22 + (157500-82500) * 0.24 + (200000 - 157500) * 0.32 + taxable_income35 * 0.35;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}else{
+	var taxable_income37 = taxable_income - 500000;	
+    var tax = 9525*0.1 + (38700 - 9525) * 0.12 + (82500-38700) * 0.22 + (157500-82500) * 0.24 + (200000 - 157500) * 0.32 + (500000 - 200000) * 0.35 + taxable_income37 * 0.37;
+	
+	console.log("Ваша сумма налога итого составляет " + tax );
+	}
+	
+	
+	</script>
