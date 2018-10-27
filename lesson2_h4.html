@@ -1,0 +1,25 @@
+<script>
+
+    var sum = +prompt("Введите сумму депозита в грн ");
+    var year = +prompt("Введите год когда Вы разместили денежные средства в формате хххх "); 
+	
+	
+	
+	if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)){
+    var days_a_year = 366;
+	var actual_days = 548;
+    }else{days_a_year = 365;
+	if(((year+1) % 4 == 0 && (year+1) % 100 != 0) || ((year+1) % 400 == 0)){
+	var actual_days = 548;
+	}else{
+	var actual_days = 547;
+	}}	
+    
+	var daily_income = sum * 0.22 / days_a_year;
+	var income = daily_income * actual_days;
+	
+	console.log("Ваш доход от размещения депозита в день составляет " + Number(daily_income).toFixed(2)+ " грн" );
+	console.log("Ваш доход от размещения депозита на весь срок (1,5 года) составляет " + Number(income).toFixed(2)+ " грн" );
+	
+	
+</script>
