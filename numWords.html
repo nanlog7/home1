@@ -1,0 +1,68 @@
+<script>
+
+    var a = +prompt("Введите сумму до 1000 грн без копеек: ");
+	
+	var tens = ["","","двадцать ","тридцать ","сорок ","пятьдесят ","шестьдесят ","семьдесят ","восемьдесят   ","девяносто "];
+	var units = ["","одна","две","три","четыре","пять","шесть","семь","восемь","девять","десять","одиннадцать","двенадцать","тринадцать","четырнадцать","пятнадцать","шестнадцать","семнадцать","восемнадцать","девятнадцать"];
+    var hundreds = ["","сто ","двести ","триста ","четыреста ","пятьсот ","шестьсот ","семьсот ","восемьсот ","девятьсот "];
+    var UAH = [" гривен"," гривны"," гривна"];
+
+
+    var words = "";
+	
+	
+	function numberWords(sum){
+	
+	if((sum == 0) || (sum > 999)){
+    console.log("Введите другую сумму");
+	};
+	
+	var index = Math.floor(sum / 100);
+	
+	if(index > 0){	
+	words += hundreds[index];
+	var num = Math.floor(sum / 100)*100;
+	sum -= num;
+	
+	
+	};
+	
+	if(sum < 20){
+   	words += units[sum];
+	
+	}else{
+	
+	var index = Math.floor(sum / 10);
+	words += tens[index];
+	var num = Math.floor(sum / 10)*10;
+	sum -= num;
+	words += units[sum];
+	};
+	
+	
+    if((sum > 4) || (sum == 0)){
+	words += UAH[0];
+	}else if((sum > 1) && (sum <= 4)){
+	words += UAH[1];
+	}else{
+	words += UAH[2];
+    };
+	
+	
+	
+	return words
+
+	};
+	
+	
+	
+	
+	
+	
+    console.log(numberWords(a));
+	
+	
+	
+	
+	
+</script>
